@@ -1,0 +1,46 @@
+<div class="container inner-page">
+    <div class="row page-product-wrap">
+        <div class="col-md-4 page-product-photo">
+            <img [src]="product?.image" width = "100%" />
+        </div>
+        <div class="col-md-8">
+            <input type="hidden" name="product-id" value="239490" />
+            <br>
+            <h3 class="page-product-name">{{ product?.name }}</h3>
+
+            <div class="page-product-price">
+                <h5>MYR {{ product?.price }}</h5>
+            </div>
+            <div class="col-sm-7 page-product-variation">
+            </div>
+            <div class="col-md-12 page-product-action">
+                <div class="row">
+                    <div class="col-md-6 page-product-quantity">
+                        <span class="label-name">Quantity</span>
+                        <div class="label-action">
+                            <input id="productQuantity" type="number" name="quantity" value="0" class="form-control"
+                                [max]="product?.stock" min="0" [(ngModel)]="product_quantity" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <br><button id="add-to-cart" type="submit" (click)="buyProduct()"
+                            class="btn btn-primary btn-sm">Add To Cart</button>
+                    </div>
+                </div><br>
+                <div class="page-product-description">
+                    <span><i class="fa fa-tags" aria-hidden="true"></i> PRODUCT INFORMATION </span>
+                    <p>{{ product?.description }}</p>
+                    <p> </p>
+                    <p>Product Details</p>
+                    <p>Material : {{ product?.material }}</p>
+                    <p>Measurement : {{ product?.measurement }}</p>
+                    <p>Packaging: {{ product?.packaging }}</p>
+                    <p> </p>
+                    <p>*Please bear in mind that photo may slightly different (about 30%) from actual item in terms
+                        of color due to the lighting during photo shooting</p>
+                    <p>*FREE AZ Canvas Bag with minimum purchase of RM250. Limited to 50 earliest customers!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

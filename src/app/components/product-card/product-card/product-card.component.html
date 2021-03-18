@@ -1,0 +1,25 @@
+<div class="col-md-3 catelogue-product" style="max-width: 100%">
+    <div class="card">
+        <div class="card-block">
+            <div class="product-image">
+                <a href="#" class="has-second-image">
+                    <img class="first-image" width="250" height="250" [src]="product.image" >
+                </a>
+            </div>
+            <div class=" product-details">
+                    <div class="caption" style="margin: 10px 0;">
+                        <div class="name">
+                            <a>{{ product.name }}</a>
+                        </div>
+                        <div class="price">MYR {{ product.price }}
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="button-group">
+                        <a class="btn btn-primary" (click)="goDetails(product.id)">Buy Now</a>
+                        <span style="float: right">Stock: {{ product.stock }}</span>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
